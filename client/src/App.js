@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './styles/reset.css';
 import './styles/base.css';
-import Header from './components/layout/Header';
 import TopArea from './components/layout/TopArea';
 import MapArea from './components/layout/MapArea';
 
@@ -52,7 +51,6 @@ function App() {
 
   return (
     <>
-      <Header />
       {locations.length === 0 && ( // if locations empty go to Top Area
         <TopArea
           userLocation={userLocation}

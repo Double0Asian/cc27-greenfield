@@ -1,6 +1,7 @@
 /* all */
 header {
   background: #a9a9a9;
+  height: 80%;
   color: #fff;
   display: flex;
   justify-content: space-between;
