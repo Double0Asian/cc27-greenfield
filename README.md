@@ -38,7 +38,7 @@ ToiletFinder.com is the only app that provides fast relief!
 2. Create a second **.env** file in the client folder and inside it add the following:
 
         REACT_APP_LOCAL_SERVER=http://localhost:8000
-        REACT_APP_GOOGLE_API_KEY=YourKeyHere
+        REACT_APP_API_KEY=YourKeyHere
 
 3. Setup [Google Maps Platform](https://developers.google.com/maps/get-started) Account (Gives you access to use Google Maps API)
     
@@ -98,11 +98,9 @@ Heroku will use this script on deployment.
 
 1. Enable live location update as user walks toward location (paid)
 2. Expand database to cover all of Tokyo
-3. Unclutter the map - get rid of uneccesary native map info, icons, etc.
-4. Work on CSS styling
-5. Enable more API endpoints and location filtering modes (kid friendly, accessability, open hours)
-6. Create review function for users to rate bathroom experience
-7. Create native app for iOS/Android
+3. Enable more API endpoints and location filtering modes (kid friendly, accessability, open hours)
+4. Create review function for users to rate bathroom experience
+5. Create native app for iOS/Android
 
 
 <br>
