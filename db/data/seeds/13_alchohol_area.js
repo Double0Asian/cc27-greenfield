@@ -1,0 +1,46 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> } 
+ */
+exports.seed = async function(knex) {
+  await knex('locations').insert([
+    {name: 'Kumazawa Book Store', type: 'bookStore', lat: 35.7289569, lng: 139.7095242},
+    {name: 'JUNKUDO Ikebukuro', type: 'bookStore', lat: 35.72684, lng: 139.712244},
+    {name: 'Comic Toranoana Ikebukuro A', type: 'bookStore', lat: 35.7307534, lng: 139.7145593},
+    {name: 'Stella Worth', type: 'bookStore', lat: 35.7292283, lng: 139.7159902},
+    {name: 'Book Gallery Popotamu', type: 'bookStore', lat: 35.7256719, lng: 139.7052235},
+    {name: 'K-BOOKS Live Pavilion', type: 'bookStore', lat: 35.7312256, lng: 139.7184641},
+    {name: 'Tokyo Tenroin', type: 'bookStore', lat: 35.7243187, lng: 139.7164541},
+    {name: 'とかち書房', type: 'bookStore', lat: 35.7274248, lng: 139.7027964},
+    {name: 'サインカフェベリーユー', type: 'restaurant', lat: 35.7233655, lng: 139.5069036},
+    {name: 'Olive', type: 'restaurant', lat: 35.7235114, lng: 139.5140332},
+    {name: 'amica', type: 'restaurant', lat: 35.7244451, lng: 139.5131063},
+    {name: 'hug', type: 'restaurant', lat: 35.7228866, lng: 139.5137205},
+    {name: 'Ciao em Cafe', type: 'restaurant', lat: 35.72692219999999, lng: 139.5113222},
+    {name: 'カフェ ワン ポイント cafe One point', type: 'restaurant', lat: 35.7292454, lng: 139.5090062},
+    {name: 'La Rose Blanche', type: 'restaurant', lat: 35.72800530000001, lng: 139.5068028},
+    {name: 'McDonald\'s', type: 'restaurant', lat: 35.72694320000001, lng: 139.5136859},
+    {name: '杏\'s Cafe', type: 'restaurant', lat: 35.7282965, lng: 139.5127069},
+    {name: 'Doutor', type: 'restaurant', lat: 35.7266065, lng: 139.5127974},
+    {name: 'Mister Donuts Hana-Koganei Station South Shop', type: 'restaurant', lat: 35.726134, lng: 139.512262},
+    {name: '神戸屋ブレッズカフェ 花小金井駅店', type: 'restaurant', lat: 35.7260451, lng: 139.5132599},
+    {name: 'flower', type: 'restaurant', lat: 35.726502, lng: 139.5141899},
+    {name: 'HANA cafe style', type: 'restaurant', lat: 35.7249672, lng: 139.5124971},
+    {name: 'GRUAU', type: 'restaurant', lat: 35.72785620000001, lng: 139.5145975},
+    {name: 'cafe81+ カフェハチイチプラス', type: 'restaurant', lat: 35.7255407, lng: 139.515346},
+    {name: 'Hoshino Coffee', type: 'restaurant', lat: 35.7255002, lng: 139.5106253},
+    {name: 'Taishi Coffee', type: 'restaurant', lat: 35.7269256, lng: 139.5095584},
+    {name: 'art&eat 森の詩', type: 'restaurant', lat: 35.7248028, lng: 139.5096587},
+    {name: 'cafeゆうなぎ', type: 'restaurant', lat: 35.7231913, lng: 139.5129352},
+    {name: 'ABC-MART 池袋ANNEX店', type: 'shoeStore', lat: 35.7307864, lng: 139.7151575},
+    {name: 'ABC-MART Ikebukuro Sunshine City Shop', type: 'shoeStore', lat: 35.7294064, lng: 139.7187066},
+    {name: 'ルイ・ヴィトン 西武池袋店', type: 'shoeStore', lat: 35.7302309, lng: 139.7121346},
+    {name: 'Dr. Martens', type: 'shoeStore', lat: 35.729673, lng: 139.7162496},
+    {name: '高買屋.com', type: 'shoeStore', lat: 35.7251522, lng: 139.714095},
+    {name: 'Asics', type: 'shoeStore', lat: 35.7285408, lng: 139.7114368},
+    {name: 'Camper', type: 'shoeStore', lat: 35.7302084, lng: 139.7105075},
+    {name: 'イング 東武百貨店池袋店', type: 'shoeStore', lat: 35.7302163, lng: 139.7103872},
+    {name: 'FRED PERRY PARCO Shibuya Store', type: 'shoeStore', lat: 35.7305968, lng: 139.712438},
+    {name: 'プリティバレリーナス', type: 'shoeStore', lat: 35.7296492, lng: 139.7118208},
+  ]);
+};

@@ -6,4 +6,5 @@ export default function Button(props) {
   return (
     <button className='go_button' onClick={props.onClick}>{props.title}</button>
   )
+  
 }

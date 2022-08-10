@@ -6,6 +6,7 @@ module.exports = {
   connection: process.env.DATABASE_URL
     ? {
         connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
       }
     : {
         database: process.env.DB_NAME,
