@@ -4,7 +4,7 @@
 
 <br>
 
-Developers - Felipe Machado, Marie Matsumoto, Joe Sacco - CC27
+Developers - Felipe Machado, Marie Matsumoto, Joe Sacco, Kurumi Muto (walnut07), Daiki Uema (cskejivic), Kim Ly(Double0Asian) - CC27
 
 ToiletFinder.com is a super convenient search tool powered by Google Maps for finding the closest bathroom to your location, immediately.
 
@@ -57,8 +57,8 @@ ToiletFinder.com is the only app that provides fast relief!
 1. Create a local Postgres database called 'greenfield'.
 2. Run the following scripts:
 
-        $npm run migrate-latest
-        $npm run seed-data
+        $ npm run migrate-latest
+        $ npm run seed-data
 
 <br>
 
@@ -85,7 +85,7 @@ The React server should run on Local Port 3000.
 
 To start the Express local server: 
 
-        $npm run prod
+        $ npm run prod
 
 The Express server should run on Local Port 8000 serving the static React build files.
 
