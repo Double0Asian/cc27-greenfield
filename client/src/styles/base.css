@@ -27,6 +27,7 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.5px);
   padding: 50px;
+  overflow: hidden;
 }
 
 /* tablet, sp */
@@ -48,4 +49,7 @@ body {
 
 /* pc */
 @media screen and (min-width: 768px) {
+  .container {
+    max-height: 70vh;
+  }
 }
