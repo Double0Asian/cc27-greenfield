@@ -35,6 +35,15 @@ export default function MapArea(props) {
             mapContainerStyle={mapStyles}
             zoom={13}
             center={activeMarker ? null : defaultCenter}
+            options={{
+              styles: [
+                {
+                  featureType: "poi",
+                  elementType: "labels",
+                  stylers: [{ visibility: "off" }],
+                },
+              ],
+            }}
           >
             {props.userLocation["lat"] && (
               <MapMarkers
