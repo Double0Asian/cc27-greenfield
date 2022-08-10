@@ -1,14 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poiret+One&display=swap");
+
 /* all */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./backgrounds/blob-scene-haikei.svg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 60px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  padding: 50px;
 }
 
 /* tablet, sp */
 @media screen and (max-width: 767px) {
-
+  .app {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+  }
+  .container {
+    max-width: 200px;
+    max-height: 650px;
+    flex-direction: column;
+    padding: 80px;
+    gap: 20px;
+  }
 }
 
 /* pc */
 @media screen and (min-width: 768px) {
-
 }

@@ -1,8 +1,10 @@
 /* all */
 .go_button {
   display: block;
+  width: 100%;
   color: #fff;
-  background: #ffa500;
+  background: #FA2FB5;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
@@ -12,20 +14,35 @@
   opacity: 0.7;
 }
 
+.go_button_info {
+  padding: 10px;
+
+}
+
+.go_button_small {
+  width: 100%;
+  color: #fff;
+  background: #FA2FB5;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
 /* tablet, sp */
 @media screen and (max-width: 767px) {
   .go_button {
-    margin: 30px auto;
-    padding: 20px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
 /* pc */
 @media screen and (min-width: 768px) {
   .go_button {
-    margin: 40px auto;
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
   }
 }

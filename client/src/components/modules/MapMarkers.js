@@ -1,7 +1,7 @@
-import React from 'react';
-import { MarkerF, InfoWindowF } from '@react-google-maps/api';
-import Button from './Button';
-import ItemInfo from './ItemInfo';
+import React from "react";
+import { MarkerF, InfoWindowF } from "@react-google-maps/api";
+import SmallButton from "./SmallButton";
+import ItemInfo from "./ItemInfo";
 export default function Map(props) {
   const handleActiveMarker = (marker) => {
     if (marker === props.activeMarker) {
@@ -33,7 +33,7 @@ export default function Map(props) {
             <MarkerF
               key={item.id + 1}
               icon={{
-                url: 'https://i.ibb.co/r3cPX7w/logo-marker-sm.png',
+                url: "https://i.ibb.co/r3cPX7w/logo-marker-sm.png",
               }}
               position={{ lat: Number(item.lat), lng: Number(item.lng) }}
               onClick={() => handleActiveMarker(item.id)}
@@ -42,9 +42,9 @@ export default function Map(props) {
                 <InfoWindowF onCloseClick={() => props.setActiveMarker(null)}>
                   <div>
                     <ItemInfo item={item} />
-                    {!props.destination['name'] && (
-                      <Button
-                        title={'Go!'}
+                    {!props.destination["name"] && (
+                      <SmallButton
+                        title={"Go!"}
                         // this click will make MapArea change to DetailArea component
                         onClick={() => setState(item)}
                       />

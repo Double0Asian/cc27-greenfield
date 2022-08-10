@@ -1,18 +1,22 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import './styles/reset.css';
-import './styles/base.css';
-import Header from './components/layout/Header';
-import TopArea from './components/layout/TopArea';
-import MapArea from './components/layout/MapArea';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import "./styles/reset.css";
+import "./styles/base.css";
+import Header from "./components/layout/Header";
+import TopArea from "./components/layout/TopArea";
+import MapArea from "./components/layout/MapArea";
+import Loading from "./components/modules/Loading";
+import { LoadScript } from "@react-google-maps/api";
 
 function App() {
   const [userLocation, setUserLocation] = useState({});
   const [mode, setMode] = useState();
   const [locations, setLocations] = useState([]);
   const [destination, setDestination] = useState({});
+  const [isActive, setIsActive] = useState(false);
 
-  const LOCAL_SERVER = process.env.REACT_APP_LOCAL_SERVER || '';
+  const LOCAL_SERVER = process.env.REACT_APP_LOCAL_SERVER || "";
+  const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
 
   const getData = async function (limit, mode) {
     await axios
@@ -28,20 +32,20 @@ function App() {
   };
   // get locations based on menu mode selection
   useEffect(() => {
-    if (userLocation['lat']) {
+    if (userLocation["lat"]) {
       // if user location exists
       switch (mode) {
-        case 'closest_bathroom':
-          getData(1, 'closest_bathroom');
+        case "closest_bathroom":
+          getData(1, "closest_bathroom");
           break;
-        case 'public_bathroom':
-          getData(100, 'public_bathroom');
+        case "public_bathroom":
+          getData(100, "public_bathroom");
           break;
-        case 'non_public_bathroom':
-          getData(100, 'non_public_bathroom');
+        case "non_public_bathroom":
+          getData(100, "non_public_bathroom");
           break;
-        case 'all_bathrooms':
-          getData(100, 'all_bathrooms');
+        case "all_bathrooms":
+          getData(100, "all_bathrooms");
           break;
         default:
           break;
@@ -51,25 +55,39 @@ function App() {
   }, [userLocation, mode]);
 
   return (
-    <>
-      <Header />
-      {locations.length === 0 && ( // if locations empty go to Top Area
+    <div className="app">
+      <LoadScript
+        googleMapsApiKey={GOOGLE_API_KEY}
+        loadingElement={<Loading />}
+      ></LoadScript>
+      <div
+        className="container"
+        style={{
+          width: isActive ? "80%" : "40%",
+          transition: "all 500ms",
+        }}
+      >
         <TopArea
           userLocation={userLocation}
           setUserLocation={setUserLocation}
           mode={mode}
           setMode={setMode}
+          isActive={isActive}
+          setIsActive={setIsActive}
         />
-      )}
-      <MapArea
-        userLocation={userLocation}
-        setUserLocation={setUserLocation}
-        locations={locations}
-        setLocations={setLocations}
-        destination={destination}
-        setDestination={setDestination}
-      />
-    </>
+        {locations.length > 0 && (
+          <MapArea
+            userLocation={userLocation}
+            setUserLocation={setUserLocation}
+            locations={locations}
+            setLocations={setLocations}
+            destination={destination}
+            setDestination={setDestination}
+            setIsActive={setIsActive}
+          />
+        )}
+      </div>
+    </div>
   );
 }
 
