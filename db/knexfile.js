@@ -1,5 +1,5 @@
 require('dotenv').config(
-
+  {path: "../../.env"}
 );
 module.exports = {
   client: 'pg',
