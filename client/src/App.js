@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./styles/reset.css";
 import "./styles/base.css";
-import Header from "./components/layout/Header";
 import TopArea from "./components/layout/TopArea";
 import MapArea from "./components/layout/MapArea";
 import Loading from "./components/modules/Loading";

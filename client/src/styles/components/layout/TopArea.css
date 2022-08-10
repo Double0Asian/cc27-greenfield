@@ -40,7 +40,7 @@
   }
 
   .top_title {
-    font-size: 150px;
+    font-size: 120px;
     margin-bottom: 40px;
   }
 }
@@ -79,6 +79,6 @@
   .drop_menu {
     margin: 40px auto;
     padding: 20px;
-    font-size: 30px;
+    font-size: 24px;
   }
 }
