@@ -1,16 +1,34 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* all */
+.top_area {
+  width: 50%;
+  flex: column;
+  font-family: "Open Sans", cursive;
+  color: #efefef;
+  animation: fadeIn 3s;
+}
+
 .top_title {
   text-align: center;
+  font-family: "Poiret One", cursive;
+  letter-spacing: 5px;
 }
 
 /* tablet, sp */
 @media screen and (max-width: 767px) {
   .top_area {
-    margin: 30px 0;
+    width: 100%;
   }
 
   .top_title {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 30px;
   }
 }
@@ -22,7 +40,7 @@
   }
 
   .top_title {
-    font-size: 32px;
+    font-size: 150px;
     margin-bottom: 40px;
   }
 }
@@ -30,12 +48,17 @@
 /* all */
 .drop_menu {
   display: block;
+  width: 100%;
   /* color: #fff; */
   /* background: #ffa500; */
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffc23c;
+  color: #31087b;
 }
 
 .drop_menu:hover {
@@ -46,8 +69,8 @@
 @media screen and (max-width: 767px) {
   .drop_menu {
     margin: 30px auto;
-    padding: 20px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
@@ -56,6 +79,6 @@
   .drop_menu {
     margin: 40px auto;
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
