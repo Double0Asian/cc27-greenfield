@@ -9,11 +9,8 @@
 
 /* all */
 .map_area {
-  position: relative;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   background-color: #efefef;
   border-radius: 20px;
   align-items: center;
@@ -41,13 +38,13 @@
 /* tablet, sp */
 @media screen and (max-width: 767px) {
   .map_area {
-    width: 150%;
-    overflow:visible;
+    overflow: visible;
   }
 
   .map {
-    width: 250px;
+    width: 350px;
     height: 400px;
+    padding: 0px;
   }
 
   .map_title {
@@ -57,13 +54,12 @@
 
 /* pc */
 @media screen and (min-width: 768px) {
-
   .map_area {
-    padding: 0 50px;
+    padding: 20px;
   }
   .map {
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 400px;
   }
 
   .map_title {

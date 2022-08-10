@@ -8,11 +8,11 @@
 }
 /* all */
 .top_area {
-  width: 50%;
   flex: column;
   font-family: "Open Sans", cursive;
   color: #efefef;
   animation: fadeIn 3s;
+  justify-content: space-between;
 }
 
 .top_title {
@@ -40,7 +40,7 @@
   }
 
   .top_title {
-    font-size: 120px;
+    font-size: 100px;
     margin-bottom: 40px;
   }
 }
@@ -79,6 +79,6 @@
   .drop_menu {
     margin: 40px auto;
     padding: 20px;
-    font-size: 24px;
+    font-size: 18px;
   }
 }

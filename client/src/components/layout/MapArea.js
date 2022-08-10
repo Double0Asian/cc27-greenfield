@@ -26,9 +26,6 @@ export default function MapArea(props) {
 
   return (
     <div className="map_area">
-      {props.locations.length > 1 && (
-        <h2 className="map_title">Select a bathroom to route</h2>
-      )}
       {props.locations.length > 0 && (
         <div className="map">
           <GoogleMap
@@ -63,9 +60,9 @@ export default function MapArea(props) {
               />
             )}
           </GoogleMap>
-          <Button title="Reset" onClick={clearState} />
         </div>
       )}
+      <Button title="Reset" onClick={clearState} />
     </div>
   );
 }

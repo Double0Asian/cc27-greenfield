@@ -19,7 +19,7 @@ body {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 100px;
   background: rgba(255, 255, 255, 0.12);
@@ -39,6 +39,7 @@ body {
     flex-direction: column;
   }
   .container {
+    position: relative;
     max-width: 200px;
     max-height: 650px;
     flex-direction: column;
