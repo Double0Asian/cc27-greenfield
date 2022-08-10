@@ -36,5 +36,8 @@ export default function typeNormalize(type) {
   if (type === 'shoeStore') {
     return 'Shoe Store';
   }
+  if (type === 'restaurant') {
+    return 'Restaurant'
+  }
   return `'${type}'`
 }
