@@ -4,7 +4,7 @@
 
 <br>
 
-Developers - Felipe Machado, Marie Matsumoto, Joe Sacco, Kurumi Muto (walnut07), Daiki Uema (cskejivic), Kim Ly(Double0Asian) - CC27
+Developers - Felipe Machado, Marie Matsumoto, Joe Sacco, Kurumi Muto (walnut07), Daiki Uema (cskejivic), Kim Ly(kimly888) - CC27
 
 ToiletFinder.com is a super convenient search tool powered by Google Maps for finding the closest bathroom to your location, immediately.
 
